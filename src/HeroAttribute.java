@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class HeroAttribute {
 
     int strength;
@@ -32,4 +34,16 @@ public class HeroAttribute {
         return totalInt;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        HeroAttribute that = (HeroAttribute) o;
+        return strength == that.strength && dexterity == that.dexterity && intelligence == that.intelligence;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(strength, dexterity, intelligence);
+    }
 }

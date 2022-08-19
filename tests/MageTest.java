@@ -6,16 +6,14 @@ class MageTest {
     @Test
     public void make_validMage_shouldGetMage() {
 
-        String expectName = "Lord Nicholas III";
-        int expectStr = 1;
-
         Hero hero = new Mage("Lord Nicholas III");
 
-        String actualName = hero.name;
-        int actualStr = hero.stats.strength;
+        HeroAttribute expect = new HeroAttribute();
+        expect.setAttributes(1,1,8);
 
-        assertEquals(expectName, actualName);
-        assertEquals(expectStr, actualStr);
+        HeroAttribute actual = hero.stats;
+
+        assertEquals(expect, actual);
     }
 
 }
