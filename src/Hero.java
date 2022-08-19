@@ -126,12 +126,12 @@ abstract class Hero {
 
         try {
             if (level < armor.requiredLevel){
-                throw new InvalidWeaponException("Too low level");
+                throw new InvalidArmorException("Too low level");
             }
             if (!validArmorType.contains(armor.armorType.name())){
-                throw new InvalidWeaponException("Your class cant use " + armor.armorType + " armor");
+                throw new InvalidArmorException("Your class cant use " + armor.armorType + " armor");
             }
-        } catch (InvalidWeaponException err){
+        } catch (InvalidArmorException err){
             System.err.println(err);
             return;
         }

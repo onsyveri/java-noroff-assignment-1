@@ -1,19 +1,20 @@
-public class Mage extends Hero {
+public class Rogue extends Hero{
 
-    public Mage(String name) {
+    public Rogue(String name) {
         this.name = name;
-        this.heroClass = "Mage";
-        this.stats.setAttributes(1, 1, 8);
-        this.validWeaponType.add("Staff");
-        this.validWeaponType.add("Wand");
-        this.validArmorType.add("Cloth");
+        this.heroClass = "Rouge";
+        this.stats.setAttributes(2, 6, 1);
+        this.validWeaponType.add("Dagger");
+        this.validWeaponType.add("Sword");
+        this.validArmorType.add("Leather");
+        this.validArmorType.add("Mail");
         this.EquipmentSlots();
         this.Damage();
     }
 
     @Override
     public void Damage(){
-        DamagingAttribute = stats.getTotalInt();
+        DamagingAttribute = stats.getTotalDex();
         super.Damage();
     }
     @Override
@@ -24,8 +25,8 @@ public class Mage extends Hero {
     @Override
     public void LevelUp() {
         strUp = 1;
-        dexUp = 1;
-        intUp = 5;
+        dexUp = 4;
+        intUp = 1;
         super.LevelUp();
     }
 
