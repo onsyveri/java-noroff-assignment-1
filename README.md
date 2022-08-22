@@ -9,6 +9,7 @@ Available heros:
 - Warroir
 
 Eks.
+
 Hero object-name = new Mage("Hero Name");
 
 ## How to equip weapon
@@ -31,5 +32,7 @@ Warrior:
 - Hammer
 
 Eks.
+
 Weapon object-name = new Weapon ("Weapon Name", required-level, Slot, weapon-damage, WeaponType);
+
 object-name.equipWeapon(object-name);
